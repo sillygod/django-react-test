@@ -1,0 +1,8 @@
+*.pyc
+*.egg-info/
+*.swp
+*.sqlite3
+build/
+node_modules/
+webpack.stats.json
+
