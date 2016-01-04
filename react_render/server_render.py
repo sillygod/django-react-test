@@ -3,6 +3,7 @@ import requests
 import hashlib
 
 from django.conf import settings
+from django.core import serializers
 
 from .exceptions import RenderServerError
 from .exceptions import ReactRenderingError
@@ -37,6 +38,7 @@ class ServerRender:
             self._render_url = self._react_settings['RENDER_URL']
 
     def render(self, path, props=None, to_static_markup=False):
+
         if props is not None:
             serialized_props = json.dumps(props)
         else:

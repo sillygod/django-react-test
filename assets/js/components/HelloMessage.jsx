@@ -13,6 +13,7 @@ export default class HelloMessage extends React.Component {
     }
 
     render(){
-        return (<div onClick={this.onClick}>hello</div>);
+        console.log('do rendering...');
+        return <div onClick={this.onClick}>hello</div>;
     }
 }

@@ -37,7 +37,16 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'webpack_loader',
+
+    'react_render',
 )
+
+REACT = {
+    'ENABLE': DEBUG,  # this line should be not DEBUG, now set to DEBUG for testing
+    'RENDER_URL': 'http://127.0.0.1:9000/render'
+}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -55,7 +64,9 @@ ROOT_URLCONF = 'redux_server_render.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, "templates"),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,6 +113,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets")
 ]
@@ -109,6 +121,6 @@ STATICFILES_DIRS = [
 WEBPACK_LOADER = {
     'DEFAULT': {
         'BUNDLE_DIR_NAME': "bundles/",
-        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json')
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack.stats.json')
     }
 }

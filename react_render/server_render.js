@@ -18,7 +18,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var reactRender = require('react-render');
 
-require('babel-core/register');
+require('babel-core/register')({
+    presets: ['es2015', 'react']
+});
 
 var ADDRESS = argv.address;
 var PORT = argv.port;
