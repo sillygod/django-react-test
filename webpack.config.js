@@ -2,6 +2,9 @@ var path = require("path");
 var webpack = require("webpack");
 var BundleTracker = require("webpack-bundle-tracker");
 
+var precss = require('precss');
+var autoprefixer = require('autoprefixer');
+
 module.exports = {
     context: __dirname,
     entry: {
@@ -29,8 +32,16 @@ module.exports = {
                 {
                     presets: ["es2015", "react"]
                 }
+            },
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader!postcss-loader"
             }
         ]
+    },
+
+    postcss: function(){
+        return [precss, autoprefix];
     },
 
     resolve: {
