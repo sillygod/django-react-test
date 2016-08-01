@@ -2,6 +2,7 @@
   "name": "redux-test",
   "version": "0.0.1",
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
     "babel": "^6.3.26",
     "babel-core": "^6.3.26",
     "babel-loader": "^6.2.0",
@@ -9,9 +10,12 @@
     "babel-preset-react": "^6.3.13",
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
+    "postcss-loader": "^0.9.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
+    "react-redux": "^4.4.5",
     "react-render": "^1.1.0",
+    "redux-devtools": "^3.3.1",
     "webpack": "^1.12.9",
     "webpack-bundle-tracker": "0.0.9"
   }
