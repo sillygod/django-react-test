@@ -38,13 +38,15 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # third party app
     'webpack_loader',
 
+    # project's app
     'react_render',
 )
 
 REACT = {
-    'ENABLE': DEBUG,  # this line should be not DEBUG, now set to DEBUG for testing
+    'ENABLE': not DEBUG,
     'RENDER_URL': 'http://127.0.0.1:9000/render'
 }
 
