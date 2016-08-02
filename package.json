@@ -17,9 +17,14 @@
     "react-dom": "^0.14.2",
     "react-redux": "^4.4.5",
     "react-render": "^1.1.0",
+    "react-router": "^2.6.1",
+    "react-router-redux": "^4.0.5",
+    "redbox-react": "^1.2.10",
     "redux-devtools": "^3.3.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.9",
-    "webpack-bundle-tracker": "0.0.9"
+    "webpack-bundle-tracker": "0.0.9",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.12.2"
   }
 }
