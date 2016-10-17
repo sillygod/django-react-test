@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli', # must put before django.contrib.admin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,9 +41,9 @@ INSTALLED_APPS = (
 
     # third party app
     'webpack_loader',
+    'corsheaders',
 
     # project's app
-    'react_render',
 )
 
 REACT = {

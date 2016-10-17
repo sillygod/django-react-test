@@ -2,6 +2,7 @@
 *.egg-info/
 *.swp
 *.sqlite3
+*.db
 build/
 node_modules/
 bundles/
