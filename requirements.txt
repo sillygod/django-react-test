@@ -5,3 +5,4 @@ django-webpack-loader==0.2.4
 django-cors-headers==2.8.2
 Pillow==3.4.1
 requests==2.9.1
+pytz
