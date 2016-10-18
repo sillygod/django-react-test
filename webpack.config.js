@@ -8,10 +8,10 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
     context: __dirname,
     entry: {
-        index: './assets/js/index'
+        index: './frontend/index'
     },
     output: {
-        path: path.resolve("./assets/bundles/"),
+        path: path.resolve("./frontend/bundles/"),
         filename: "[name].js",
         publicPath: "/static/bundles/"
     },
