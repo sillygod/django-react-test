@@ -24,6 +24,8 @@ some devtools
  - webpack dev middleware
  - webpack hot middleware
  - redux dev tools
+ 
+ npm install -g concurrently
 
 
 # Reference
