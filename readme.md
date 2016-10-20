@@ -25,7 +25,18 @@ some devtools
  - webpack hot middleware
  - redux dev tools
  
- npm install -g concurrently
+
+
+
+# Install 
+
+```sh
+pip install -r requirements.txt # for prod
+pip install -r requirements_dev.txt # for development
+
+npm install
+npm install -g concurrently
+```
 
 
 # Reference

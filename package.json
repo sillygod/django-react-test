@@ -2,8 +2,10 @@
   "name": "redux-test",
   "version": "0.0.1",
   "scripts": {
-      "start": "cross-env NODE_ENV=dev supervisor -w assets,bin/server.js bin/server.js"
-      "dev": ""
+      "start": "cross-env NODE_ENV=dev supervisor -w assets,bin/server.js bin/server.js",
+      "dev": "concurrent --kill-others \"npm run watch-client\" \"npm run start-dev\" ",
+      "start-dev": "better-npm-run start-dev",
+      "watch-client": "better-npm-run watch-client"
   },
   "betterScripts":{
       "start-dev": {
@@ -15,7 +17,7 @@
           }
       },
       "watch-client": {
-          "command": "node webpack/webpack-dev-server.js",
+          "command": "node webpack-dev-server.js",
           "env": {
               "UV_THREADPOOL_SIZE": 100,
               "PORT": 3000,
