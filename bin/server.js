@@ -1,3 +1,4 @@
 #!/usr/bin/node
 
-require('../server.babel')
+require('../server.babel');
+var path = require('path');
