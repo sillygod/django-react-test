@@ -23,7 +23,7 @@ var serverOptions = {
 };
 
 
-var app = new Excpress();
+var app = new Express();
 
 app.use(require('webpack-dev-middleware')(compiler, serverOptions));
 app.use(require('webpack-hot-middleware')(compiler));
