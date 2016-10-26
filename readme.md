@@ -38,6 +38,12 @@ npm install
 npm install -g concurrently
 ```
 
+you may encounter an issue with `piping` module. you can resolve it by
+
+```sh
+npm install invariant warning --save
+```
+
 
 # Reference
 

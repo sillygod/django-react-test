@@ -3,6 +3,7 @@
 *.swp
 *.sqlite3
 *.db
+npm-debug.log
 build/
 node_modules/
 bundles/
