@@ -1,64 +1,86 @@
 {
-  "name": "redux-test",
-  "version": "0.0.1",
-  "scripts": {
-      "start": "cross-env NODE_ENV=dev supervisor -w assets,bin/server.js bin/server.js",
-      "dev": "concurrent --kill-others \"npm run watch-client\" \"npm run start-dev\" ",
-      "start-dev": "better-npm-run start-dev",
-      "watch-client": "better-npm-run watch-client"
-  },
-  "betterScripts":{
-      "start-dev": {
-          "command": "node ./bin/server.js",
-          "env": {
-              "NODE_ENV": "development",
-              "PORT": 3000,
-              "APIPORT": 3030
-          }
-      },
-      "watch-client": {
-          "command": "node webpack-dev-server.js",
-          "env": {
-              "UV_THREADPOOL_SIZE": 100,
-              "PORT": 3000,
-              "APIPORT": 3030
-
-          }
-      }
-  },
-  "devDependencies": {
-    "autoprefixer": "^6.3.7",
-    "babel": "^6.3.26",
-    "babel-core": "^6.3.26",
-    "babel-loader": "^6.2.0",
-    "babel-polyfill": "^6.16.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "better-npm-run": "0.0.11",
-    "body-parser": "^1.14.2",
-    "compression": "^1.6.2",
-    "cross-env": "^3.1.3",
-    "css-loader": "^0.23.1",
-    "express": "^4.13.3",
-    "http-proxy": "^1.15.1",
-    "postcss-loader": "^0.9.1",
-    "precss": "^1.4.0",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2",
-    "react-helmet": "^3.1.0",
-    "react-redux": "^4.4.5",
-    "react-render": "^1.1.0",
-    "react-router": "^2.6.1",
-    "react-router-redux": "^4.0.5",
-    "redbox-react": "^1.2.10",
-    "redux-devtools": "^3.3.1",
-    "redux-devtools-dock-monitor": "^1.1.1",
-    "redux-devtools-log-monitor": "^1.0.11",
-    "serialize-javascript": "^1.3.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.2",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.12.2",
-    "webpack-isomorphic-tools": "^2.6.3"
-  }
+    "name": "redux-test",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "cross-env NODE_ENV=dev supervisor -w assets,bin/server.js bin/server.js",
+        "dev": "concurrent --kill-others \"npm run watch-client\" \"npm run start-dev\" ",
+        "start-dev": "better-npm-run start-dev",
+        "watch-client": "better-npm-run watch-client",
+        "e2e": "node frontend/test/e2e/runner.js"
+    },
+    "betterScripts": {
+        "start-dev": {
+            "command": "node ./bin/server.js",
+            "env": {
+                "NODE_ENV": "development",
+                "PORT": 3000,
+                "APIPORT": 3030
+            }
+        },
+        "watch-client": {
+            "command": "node webpack-dev-server.js",
+            "env": {
+                "UV_THREADPOOL_SIZE": 100,
+                "PORT": 3000,
+                "APIPORT": 3030
+            }
+        }
+    },
+    "devDependencies": {
+        "autoprefixer": "^6.3.7",
+        "babel": "^6.3.26",
+        "babel-core": "^6.3.26",
+        "babel-loader": "^6.2.0",
+        "babel-polyfill": "^6.16.0",
+        "babel-preset-es2015": "^6.3.13",
+        "babel-preset-react": "^6.3.13",
+        "babel-register": "^6.18.0",
+        "better-npm-run": "0.0.11",
+        "body-parser": "^1.14.2",
+        "chai": "^3.5.0",
+        "chromedriver": "^2.24.1",
+        "compression": "^1.6.2",
+        "connect-history-api-fallback": "^1.3.0",
+        "cross-env": "^3.1.3",
+        "cross-spawn": "^4.0.2",
+        "css-loader": "^0.23.1",
+        "express": "^4.13.3",
+        "http-proxy": "^1.15.1",
+        "http-proxy-middleware": "^0.17.2",
+        "karma": "^1.3.0",
+        "karma-coverage": "^1.1.1",
+        "karma-mocha": "^1.2.0",
+        "karma-phantomjs-launcher": "^1.0.2",
+        "karma-sinon-chai": "^1.2.4",
+        "karma-sourcemap-loader": "^0.3.7",
+        "karma-spec-reporter": "^0.0.26",
+        "karma-webpack": "^1.8.0",
+        "mocha": "^3.1.2",
+        "nightwatch": "^0.9.8",
+        "opn": "^4.0.2",
+        "phantomjs-prebuilt": "^2.1.13",
+        "postcss-loader": "^0.9.1",
+        "precss": "^1.4.0",
+        "react": "^0.14.2",
+        "react-dom": "^0.14.2",
+        "react-helmet": "^3.1.0",
+        "react-redux": "^4.4.5",
+        "react-render": "^1.1.0",
+        "react-router": "^2.6.1",
+        "react-router-redux": "^4.0.5",
+        "redbox-react": "^1.2.10",
+        "redux-devtools": "^3.3.1",
+        "redux-devtools-dock-monitor": "^1.1.1",
+        "redux-devtools-log-monitor": "^1.0.11",
+        "selenium-server": "^3.0.1",
+        "serialize-javascript": "^1.3.0",
+        "sinon": "^1.17.6",
+        "sinon-chai": "^2.8.0",
+        "style-loader": "^0.13.1",
+        "webpack": "^1.13.2",
+        "webpack-bundle-tracker": "^0.0.93",
+        "webpack-dev-middleware": "^1.6.1",
+        "webpack-hot-middleware": "^2.12.2",
+        "webpack-isomorphic-tools": "^2.6.3"
+    }
 }
