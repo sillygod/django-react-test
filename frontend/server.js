@@ -5,7 +5,7 @@ import compression from 'compression';
 import httpProxy from 'http-proxy';
 
 import path from 'path';
-import createStore from '/.refux/create';
+import createStore from './redux/create';
 import Html from './helpers/Html';
 import http from 'http';
 
