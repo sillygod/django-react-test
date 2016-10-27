@@ -20,7 +20,6 @@ try {
     console.error(err);
 }
 
-
 var babelrcObjectDevelopment = babelrcObject.env && babelrcObject.env.development || {};
 
 
@@ -95,8 +94,8 @@ module.exports = {
     progress: true,
     resolve: {
         modulesDirectories: [
-            'node_modules',
-            'frontend'
+            'frontend',
+            'node_modules'
         ],
         extensions: ['', '.json', '.js', '.jsx']
     },
