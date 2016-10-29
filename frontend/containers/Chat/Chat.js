@@ -50,7 +50,7 @@ export default class Chat extends Component {
   }
 
   render() {
-    const style = require('./Chat.scss');
+    const style = require('./Chat.css');
     const {user} = this.props;
 
     return (

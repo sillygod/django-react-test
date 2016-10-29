@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/server';
 import serialize from 'serialize-javascript';
 import Helmet from 'react-helmet';
 
-
 export default class Html extends Component {
     static propTypes = {
         assets: PropTypes.object,
@@ -32,7 +31,7 @@ export default class Html extends Component {
                                                 )}
                     {/* we can write commend by this way */}
                     {Object.keys(assets.styles).length === 0 ? <style dangerouslySetInnerHTML={{
-                        _html: require('../theme/bootstrap.config.js') + require('../containers/App/App.scss')._style
+                        _html: require('../containers/App/App.css')._style
                     }} />: null}
 
                 </head>

@@ -81,11 +81,9 @@ module.exports = {
         loaders: [
             {test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel?'+JSON.stringify(babelLoaderQuery), 'eslint-loader']},
             { test: /\.json$/, loader: 'json-loader' },
-            { test: /\.less$/, loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!less?outputStyle=expanded&sourceMap' },
-            { test: /\.scss$/, loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap' },
             {
                 test: /\.css$/,
-                loader: "style-loader!css-loader!postcss-loader?sourceMap=inline"
+                loader: "style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!postcss-loader?sourceMap=inline"
             },
 
             { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
@@ -99,7 +97,10 @@ module.exports = {
     progress: true,
 
     postcss: function(){
-        return [press, autoprefix];
+        return [
+            require(precss)(),
+            require(autoprefix)()
+        ];
     },
     resolve: {
         modulesDirectories: [
