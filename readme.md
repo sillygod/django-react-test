@@ -38,12 +38,25 @@ npm install
 npm install -g concurrently
 ```
 
-you may encounter an issue with `piping` module. you can resolve it by
+
+# Development
 
 ```sh
-npm install invariant warning --save
+npm run dev
 ```
 
+### eslint issue
+
+currently, I disable the eslint-loader function because it's so fucking annoying.
+there will be so many error..
+
+you can take it back by adding 
+
+```
+{test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel?'+JSON.stringify(babelLoaderQuery), 'eslint-loader']},
+```
+
+in the `dev.config.js` file.
 
 # Reference
 
