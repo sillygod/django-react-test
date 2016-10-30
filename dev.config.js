@@ -98,8 +98,8 @@ module.exports = {
 
     postcss: function(){
         return [
-            require(precss)(),
-            require(autoprefix)()
+            require('precss')(),
+            require('autoprefixer')()
         ];
     },
     resolve: {

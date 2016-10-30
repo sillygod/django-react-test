@@ -44,7 +44,7 @@ module.exports = {
             },
             parser: function(module, options, log){
                 if(options.development){
-                    return WebpackIsomorphicToolsPlugin.css_moudles_loader_parser(module, options, log);
+                    return WebpackIsomorphicToolsPlugin.css_modules_loader_parser(module, options, log);
                 } else {
                     return module.source;
                 }

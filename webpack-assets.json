@@ -1,7 +1,23 @@
 {
   "javascript": {
-    "main": "http://localhost:3001/dist/main-ddced3ef20704b9a7799.js"
+    "main": "http://localhost:3001/dist/main-fd2e31bda90d6b8f12cd.js"
   },
   "styles": {},
-  "assets": {}
+  "assets": {
+    "./frontend/components/InfoBar/InfoBar.css": {
+      "infoBar": "InfoBar__infoBar__a3Bce",
+      "time": "InfoBar__time__3CSPm",
+      "_style": ".InfoBar__infoBar__a3Bce {\n  font-variant: italics;\n}\n\n.InfoBar__time__3CSPm {\n  margin: 0 30px;\n}\n"
+    },
+    "./frontend/containers/App/App.css": {
+      "app": "App__app__d1de7",
+      "brand": "App__brand__8hX7B",
+      "appContent": "App__appContent__14RUk",
+      "_style": ".App__app__d1de7 .App__brand__8hX7B {\n  position: absolute;\n  top: 5px;\n  left: 5px;\n  display: inline-block;\n  background: #2d2d2d ;\n  width: 40px;\n  height: 40px;\n  background-size: 80%;\n  margin: 0 10px 0 0;\n  border-radius: 40px / 2;\n}\n.App__app__d1de7 nav .fa {\n  font-size: 2em;\n  line-height: 20px;\n}\n.App__appContent__14RUk {\n  margin: 50px 0; /*for fixed navbar */\n}\n"
+    },
+    "./frontend/containers/Chat/Chat.css": {
+      "chat": "Chat__chat__1r1Wl",
+      "_style": ".Chat__chat__1r1Wl input {\n    padding: 5px 10px;\n    border-radius: 5px;\n    border: 1px solid #ccc;\n}\n.Chat__chat__1r1Wl form {\n    margin: 30px 0;\n}\n.Chat__chat__1r1Wl form .btn {\n    margin-left: 10px;\n}"
+    }
+  }
 }
