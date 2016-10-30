@@ -2,10 +2,9 @@
 var path = require('path')
 
 module.exports = {
-  build: {
-  },
+  build: {},
   dev: {
-    port: 8080,
+    port: 8000,
     assetsPublicPath: '/',
     assetsSubDirectory: 'static'
   }

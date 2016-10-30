@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="Hellow.spac"
+    errors="0" failures="1" hostname="" id="" package="Hellow.spac" skipped="0"
+    tests="1" time="4.536" timestamp="Thu, 27 Oct 2016 02:33:20 GMT">
+  
+    <testcase name="default e2e tests" time="4.536" assertions="3">
+
+    
+
+      <failure message="Testing if element &lt;h1&gt; contains text: &quot;test2&quot;.">    at Object.defaultE2eTests [as default e2e tests] (/Users/GoreStarry/Documents/web/testNew/django-react-test/frontend/test/e2e/specs/Hellow.spac.js:12:21)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)</failure>
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>
