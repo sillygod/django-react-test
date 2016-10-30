@@ -4,9 +4,7 @@ import { isLoaded as isAuthLoaded, load as loadAuth } from './redux/modules/auth
 import {
     App,
     Chat,
-    Home,
     Widgets,
-    About,
     Login,
     LoginSuccess,
     Survey,
@@ -16,17 +14,17 @@ import {
 
 export default (store) => {
     const requireLogin = (nextState, replace, cb) => {
-        function checkAuth(){
+        function checkAuth() {
             const { auth: {user}} = store.getState();
 
-            if(!user){
+            if(!user) {
                 replace('/');
             }
 
             cb();
         }
 
-        if(!isAuthLoaded(store.getState())){
+        if(!isAuthLoaded(store.getState())) {
             store.dispatch(loadAuth()).then(checkAuth);
         } else {
             checkAuth();
@@ -53,3 +51,4 @@ export default (store) => {
     );
 
 };
+
