@@ -79,7 +79,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel?'+JSON.stringify(babelLoaderQuery)]},
+            {test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel?'+JSON.stringify(babelLoaderQuery), 'eslint-loader']},
             { test: /\.json$/, loader: 'json-loader' },
             {
                 test: /\.css$/,

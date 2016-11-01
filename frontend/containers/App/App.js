@@ -2,9 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { isLoaded as isInfoLoaded, load as loadInfo } from '../../redux/modules/info';
 import { isLoaded as isAuthLoaded, load as loadAuth, logout } from '../../redux/modules/auth';
-import { InfoBar } from '../../components';
+// import { InfoBar } from '../../components';
 import { push } from 'react-router-redux';
-import config from '../../config';
+/* import config from '../../config';*/
 import { asyncConnect } from 'redux-async-connect';
 
 @asyncConnect([{
@@ -36,12 +36,13 @@ export default class App extends Component {
         store: PropTypes.object.isRequired
     };
 
+        /* const {user} = this.props; */
     render() {
-        const {user} = this.props;
+
         const styles = require('./App.css');
 
         return (
-            <div>hello</div>
+            <div className={styles.app}>hello</div>
         );
     }
 }
