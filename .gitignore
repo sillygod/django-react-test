@@ -3,6 +3,10 @@
 *.swp
 *.sqlite3
 *.db
+__pycache__
+.cache/
+.projectile
+*.swp
 npm-debug.log
 build/
 node_modules/
