@@ -1,5 +1,6 @@
 # Django React Test
 
+[![Build Status](https://travis-ci.org/sillygod/django-react-test.svg?branch=master)](https://travis-ci.org/sillygod/django-react-test)
 This is a experimental project for react and redux with django. 
 
 
