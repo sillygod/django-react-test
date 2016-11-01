@@ -1,13 +1,13 @@
-export default function clientMiddleware(client){
+export default function clientMiddleware(client) {
     return ({dispatch, getState}) => {
         return next => action => {
 
-            if(typeof action === 'function'){
+            if(typeof action === 'function') {
                 return action(dispatch, getState);
             }
 
             const { promise, types, ...rest} = action;
-            if(!promise){
+            if(!promise) {
                 return next(action);
             }
 
@@ -19,7 +19,7 @@ export default function clientMiddleware(client){
             actionPromise.then(
                 (result) => next({...rest, result, type: SUCCESS}),
                 (error) => next({...rest, error, type: FAILURE})
-            ).catch((error)=>{
+            ).catch((error) => {
                 console.log('MIDDLEWARE ERROR:', error);
                 next({...rest, error, type: FAILURE});
             });

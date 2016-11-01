@@ -35,7 +35,6 @@ function initSocket() {
 
 global.socket = initSocket();
 
-console.log('enter');
 const component = (
         <Router render={(props) =>
                         <ReduxAsyncConnect {...props} helpers={{client}} filter={item => !item.deferred} />} history={history}>
@@ -57,7 +56,6 @@ if(process.env.NODE_ENV !== 'production') {
         console.error('Server-side React render was discarded. Make sure that your initial render does not contain any client-side code.');
     }
 }
-
 
 if(__DEVTOOLS__ && !window.devToolsExtension) {
     const DevTools = require('./containers/DevTools/DevTools');
