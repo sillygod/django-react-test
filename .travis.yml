@@ -1,8 +1,13 @@
 language: python
+
 python:
   - "3.4"
   - "3.5"
 
+before_install:
+  - pip install -U pip
+  - pip install wheel
+
 install: "pip install -r requirements_dev.txt"
 
-script: pytest --ignore=node_modules
+script: py.test --ignore=node_modules
