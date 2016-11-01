@@ -8,6 +8,6 @@ before_install:
   - pip install -U pip
   - pip install wheel
 
-install: "pip install -r requirements_dev.txt"
+install: "pip install -r -U requirements_dev.txt"
 
 script: py.test --ignore=node_modules
