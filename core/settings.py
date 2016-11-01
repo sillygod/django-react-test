@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'corsheaders',
 
     # project's app
+    'api',
 )
 
 REACT = {
@@ -131,7 +132,7 @@ WEBPACK_LOADER = {
     }
 }
 
-try
+try:
     from core.settings_dev import *
 except ImportError:
     pass
