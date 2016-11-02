@@ -45,12 +45,9 @@ INSTALLED_APPS = (
 
     # project's app
     'api',
+    'api.member',
+    'api.snippet',
 )
-
-REACT = {
-    'ENABLE': not DEBUG,
-    'RENDER_URL': 'http://127.0.0.1:9000/render'
-}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -66,7 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'redux_server_render.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
