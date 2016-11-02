@@ -5,7 +5,7 @@ import compression from 'compression';
 import httpProxy from 'http-proxy';
 
 import path from 'path';
-import createStore from '/.refux/create';
+import createStore from './redux/create';
 import Html from './helpers/Html';
 import http from 'http';
 
@@ -81,7 +81,7 @@ app.use((req, res) => {
     }
 
     match({history, routes: getRoutes(store), location: req.originalUrl}, (error, redirectLocation, renderProps) => {
-        if(redirctLocation){
+        if(redirectLocation){
             res.redirect(redirectLocation.pathname + redirectLocation.search);
         } else if (error){
             console.error('ROUTER ERROR:', pretty.render(error));
