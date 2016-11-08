@@ -57,7 +57,11 @@ npm run dev
 
 
 
-in the `dev.config.js` file.
+# Roadmap
+
+ - [ ] a simple frontend example
+ - [ ] jwt auth implement
+ - [ ] api design
 
 # Reference
 
