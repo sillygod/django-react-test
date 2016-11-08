@@ -21,7 +21,7 @@ if(__DEVELOPMENT__){
 
 var WebpackIsomorphicTools = require('webpack-isomorphic-tools');
 global.webpackIsomorphicTools = new WebpackIsomorphicTools(require('../webpack-isomorphic-settings'))
-    .development(__DEVELOPMENT__)
+    // .development(__DEVELOPMENT__) //it will break mac server render when require css
     .server(rootDir, function(){
         require('../frontend/server');
     });
