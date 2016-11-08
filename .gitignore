@@ -10,3 +10,4 @@ bundles/
 webpack.stats.json
 webpack-assets.json
 
+yarn.lock
