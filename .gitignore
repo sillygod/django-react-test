@@ -10,6 +10,7 @@ __pycache__
 npm-debug.log
 build/
 node_modules/
+migrations/
 bundles/
 webpack.stats.json
 webpack-assets.json

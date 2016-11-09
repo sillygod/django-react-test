@@ -40,17 +40,14 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # third party app
-    'webpack_loader',
     'corsheaders',
+    'rest_framework',
 
     # project's app
     'api',
+    'api.member',
+    'api.snippet',
 )
-
-REACT = {
-    'ENABLE': not DEBUG,
-    'RENDER_URL': 'http://127.0.0.1:9000/render'
-}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -66,7 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'redux_server_render.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -100,6 +97,18 @@ DATABASES = {
 }
 
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    )
+}
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
@@ -117,20 +126,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+AUTH_USER_MODEL = 'member.User'
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+
+
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets")
 ]
-
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'BUNDLE_DIR_NAME': "bundles/",
-        'STATS_FILE': os.path.join(BASE_DIR, 'webpack.stats.json')
-    }
-}
 
 try:
     from core.settings_dev import *

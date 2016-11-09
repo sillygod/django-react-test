@@ -15,7 +15,7 @@ Basically, django as a pure `api server` (backend). Frontend is responsible for 
 
 We use the following techniques.
 
- - postcss
+ - postcss (precss)
  - react
  - redux
  - express
@@ -29,6 +29,13 @@ some devtools
  - redux dev tools
  
 
+
+### backend
+
+ - django the newest version below 1.9
+ - django rest framework the newest version
+ - django rest framework swagger (for doc) 
+ - pytest (dev use)
 
 
 # Install 
@@ -48,21 +55,16 @@ npm install -g concurrently
 npm run dev
 ```
 
-### eslint issue
 
-currently, I disable the eslint-loader function because it's so fucking annoying.
-there will be so many error..
 
-you can take it back by adding 
+# Roadmap
 
-```
-{test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel?'+JSON.stringify(babelLoaderQuery), 'eslint-loader']},
-```
-
-in the `dev.config.js` file.
+ - [ ] a simple frontend example
+ - [ ] jwt auth implement
+ - [ ] api design
 
 # Reference
 
- - https://github.com/erikras/react-redux-universal-hot-example/blob/master/src/helpers/Html.js
-
+ - https://github.com/erikras/react-redux-universal-hot-example/
+ - http://hirelofty.com/blog/auto-generate-swagger-docs-your-django-api/
 
