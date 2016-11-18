@@ -98,6 +98,7 @@ DATABASES = {
 
 
 REST_FRAMEWORK = {
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
@@ -136,13 +137,3 @@ LOCALE_PATHS = (
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "assets")
-]
-
-try:
-    from core.settings_dev import *
-except ImportError:
-    pass
