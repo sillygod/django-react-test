@@ -18,6 +18,7 @@ export default class Html extends Component {
         return (
                 <html lang="en-us">
                 <head>
+            
                     {head.base.toComponent()}
                     {head.title.toComponent()}
                     {head.meta.toComponent()}
@@ -27,13 +28,11 @@ export default class Html extends Component {
                     <link rel="shortcut icon" href="/favicon.ico" />
                     <meta name="Viewport" content="width=device-width, initial-scale=1" />
                     {Object.keys(assets.styles).map((style, key)=>
-                                                    <link href={assets.styles[style]} key={key} media="screen, projectection" rel="stylesheet" type="text/css" charSet="UTF-8" />
-                                                )}
-                    {/* we can write commend by this way */}
+                        <link href={assets.styles[style]} key={key} media="screen, projectection" rel="stylesheet" type="text/css" charSet="UTF-8" />
+                    )}
                     {Object.keys(assets.styles).length === 0 ? <style dangerouslySetInnerHTML={{
-                        _html: require('../containers/App/App.css')._style
+                        __html: require('../containers/App/App.css')._style
                     }} />: null}
-
                 </head>
                 <body>
                     <div id="content" dangerouslySetInnerHTML={{__html: content}} />

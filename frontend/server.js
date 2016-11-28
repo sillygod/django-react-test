@@ -31,6 +31,12 @@ const proxy = httpProxy.createProxyServer({
 app.use(compression());
 app.use(Express.static(path.join(__dirname, './public')));
 
+app.get('/api/example', (req, res)=>{
+    res.send({
+        name: 'test1'
+    })
+})
+
 app.use('/api', (req, res)=>{
     proxy.web(req, res, {target: targetUrl});
 });
