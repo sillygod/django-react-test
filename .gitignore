@@ -14,4 +14,5 @@ migrations/
 bundles/
 webpack.stats.json
 webpack-assets.json
-
+.DS_Store
+yarn.lock

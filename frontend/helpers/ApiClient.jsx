@@ -7,7 +7,9 @@ function formatUrl(path) {
     const adjustedPath = path[0] !== '/' ? '/' + path : path;
 
     if(__SERVER__) {
-        return 'http://' + config.apiHost + ':' + config.apiPort + adjustedPath;
+        // return 'http://' + config.apiHost + ':' + config.apiPort + adjustedPath;
+        console.log('http://' + config.apiHost + ':3000' + adjustedPath);
+        return 'http://' + config.apiHost + ':3000' + adjustedPath;
     }
 
     return '/api' + adjustedPath;

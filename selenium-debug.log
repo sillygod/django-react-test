@@ -1,0 +1,39 @@
+10:33:19.362 INFO - Selenium build info: version: '3.0.1', revision: '1969d75'
+10:33:19.370 INFO - Launching a standalone Selenium Server
+2016-10-27 10:33:19.496:INFO::main: Logging initialized @1719ms
+10:33:19.850 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+ registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+10:33:19.851 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+10:33:19.852 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+10:33:19.852 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+10:33:19.853 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+10:33:19.853 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+2016-10-27 10:33:20.139:INFO:osjs.Server:main: jetty-9.2.15.v20160210
+2016-10-27 10:33:20.222:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@9629756{/,null,AVAILABLE}
+2016-10-27 10:33:20.395:INFO:osjs.ServerConnector:main: Started ServerConnector@8bd1b6a{HTTP/1.1}{0.0.0.0:4444}
+2016-10-27 10:33:20.396:INFO:osjs.Server:main: Started @2620ms
+10:33:20.396 INFO - Selenium Server is up and running
+10:33:22.026 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+10:33:22.173 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Hellow Spac, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+10:33:22.291 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Hellow Spac, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6) on port 49101
+Only local connections are allowed.
+10:33:23.738 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+10:33:25.047 INFO - Detected dialect: OSS
+10:33:25.093 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Hellow Spac, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+10:33:25.119 INFO - Executing: [get: http://localhost:8000])
+10:33:25.549 INFO - Done: [get: http://localhost:8000]
+10:33:25.564 INFO - Executing: [find elements: By.cssSelector: h1])
+10:33:25.621 INFO - Done: [find elements: By.cssSelector: h1]
+10:33:25.629 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (56028c9392c3a91e6bf83a338f21965c)] -> css selector: h1]])
+10:33:25.657 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (56028c9392c3a91e6bf83a338f21965c)] -> css selector: h1]]
+10:33:25.671 INFO - Executing: [find elements: By.cssSelector: h1])
+10:33:25.681 INFO - Done: [find elements: By.cssSelector: h1]
+10:33:25.692 INFO - Executing: [find element: By.cssSelector: h1])
+10:33:25.719 INFO - Done: [find element: By.cssSelector: h1]
+10:33:25.731 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on MAC (56028c9392c3a91e6bf83a338f21965c)] -> css selector: h1]])
+10:33:25.759 INFO - Done: [get text: 0 [[ChromeDriver: chrome on MAC (56028c9392c3a91e6bf83a338f21965c)] -> css selector: h1]]
+10:33:25.775 INFO - Executing: [delete session: a0c4d84c-7e49-4832-a807-49e6ac824c2c])
+10:33:25.862 INFO - Done: [delete session: a0c4d84c-7e49-4832-a807-49e6ac824c2c]
